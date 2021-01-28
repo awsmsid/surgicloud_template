@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{saddam}
   spec.description   = %q{saddam}
-  spec.homepage      = "https://github.com/"
+  spec.homepage      = "https://github.com/awsmsid/surgicloud_template"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
   spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
