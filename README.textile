@@ -1,0 +1,32 @@
+Use this gem to set up layout files for Surgicloud template:
+
+h2. Command Summary
+
+h4. Generate Application Layout and Navigation
+
+* @$ rails generate surgicloud_layout:install controller_name
+
+h2. Install the SurgicloudTemplate Gem
+
+Add it to your Rails application Gemfile:
+
+<pre>
+gem 'surgicloud_template', path: ''
+</pre>
+
+Use Bundler to install the gem:
+
+<pre>
+$ bundle install
+</pre>
+
+h2. CSS Usage
+
+Just add the following lines to application.css
+
+<pre>
+*= require surgicloud_template
+</pre>
+
+h2. Thanks
+
