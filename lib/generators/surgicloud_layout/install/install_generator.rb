@@ -28,6 +28,7 @@ module SurgicloudLayout
             copy_file file.split("/").last, file
           end
         end
+        copy_file 'surgicloud_logo.png', 'app/assets/images/surgicloud_logo.png'
       end
     end
   end
