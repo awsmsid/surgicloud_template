@@ -1,0 +1,27 @@
+<!--sidebar start-->
+<aside>
+  <div id="sidebar" class="nav-collapse">
+    <form action="http://localhost:3000/switch-organization" method="post" id="organization_filter" style="padding:10px;">
+      <select name="organization_id" class="form-control">
+        <option value="1" selected="">Surgicloud</option>
+      </select>
+      <input type="hidden" name="authenticity_token" id="authenticity_token" value="2VxJgsXloQ2bRbigIih1wQQpDnEbOYEM2MnYAF22dY8m4eZLVlk+bRXHcvzEL8wiXYPqVeaZJbEayU3o7F1Cew==">
+    </form>
+    <!-- sidebar menu start-->
+    <ul id="nav-accordion" class="sidebar-menu">
+      <li id="dashboard_item" class="active simple-navigation-active-leaf"><a class="active" href="http://localhost:3000/">Dashboard</a></li>
+      <li id="list_item"><a href="http://localhost:3000/orders/billing">Cases &amp; Orders</a></li>
+      <li id="calendar_item"><a href="http://localhost:3000/calendar">Calendar</a></li>
+      <li id="reports_item"><a href="http://localhost:3000/reports">Reports</a></li>
+      <li id="profiles_item"><a href="http://localhost:3000/users">Manage Profiles / Users</a></li>
+      <li id="procedures_item"><a href="http://localhost:3000/tba">Procedure Settings</a></li>
+      <li id="commission_rule_item"><a href="http://localhost:3000/commission_rules">Commission Report</a></li>
+      <li id="general_settings_item"><a href="http://localhost:3000/email_settings">General Settings</a></li>
+    </ul>
+    <!-- sidebar menu end-->
+  </div>
+  <div class="footer">
+    2021 - All rights reserved. © Surgicloud.
+  </div>
+</aside>
+<!--sidebar end-->

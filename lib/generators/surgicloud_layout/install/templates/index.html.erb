@@ -1,0 +1,119 @@
+
+<section id="container">
+  <!-- **********************************************************************************************************************************************************
+    TOP BAR CONTENT & NOTIFICATIONS
+    *********************************************************************************************************************************************************** -->
+  <%= render 'layouts/header' %>
+  <!-- **********************************************************************************************************************************************************
+    MAIN SIDEBAR MENU
+    *********************************************************************************************************************************************************** -->
+  <%= render 'layouts/navigation_menu' %>
+  <!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+  <!--main content start-->
+  <section id="main-content">
+    <div class="alert alert-info alert-dismissible" role="alert"><button class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>You are impersonating org-admin@surgicloud.com</div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="pull-left"><i class="fa fa-angle-right"></i> Dashboard</h3>
+          <div class="clearfix"></div>
+          <div class="row">
+            <div class="col-lg-9">
+              <div class="form-panel">
+                <h4 class="panel-heading">Orders for past 3 days</h4>
+                <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="dataTables_length" id="DataTables_Table_0_length">
+                        <label>
+                          Show 
+                          <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="form-control input-sm">
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                          </select>
+                          entries
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div id="DataTables_Table_0_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_0"></label></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <table class="table table-striped datatable dataTable no-footer" data-order="[[ 1, &quot;desc&quot; ]]" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                        <thead>
+                          <tr role="row">
+                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Institution: activate to sort column ascending" style="width: 88px;">Institution</th>
+                            <th class="sorting_desc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="descending" aria-label="Date: activate to sort column ascending" style="width: 45px;">Date</th>
+                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Company: activate to sort column ascending" style="width: 85px;">Company</th>
+                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Case #: activate to sort column ascending" style="width: 62px;">Case #</th>
+                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="PO #: activate to sort column ascending" style="width: 47px;">PO #</th>
+                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Manufacturer Order #: activate to sort column ascending" style="width: 179px;">Manufacturer Order #</th>
+                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label=": activate to sort column ascending" style="width: 9px;"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="odd">
+                            <td valign="top" colspan="7" class="dataTables_empty">No data available in table</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div>
+                    </div>
+                    <div class="col-sm-7">
+                      <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
+                        <ul class="pagination">
+                          <li class="paginate_button previous disabled" id="DataTables_Table_0_previous"><a href="http://localhost:3000/#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0">Previous</a></li>
+                          <li class="paginate_button next disabled" id="DataTables_Table_0_next"><a href="http://localhost:3000/#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0">Next</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-panel">
+                    <iframe class="chartjs-hidden-iframe" tabindex="-1" style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; inset: 0px;" src="./Dashboard - Surgicloud_files/saved_resource.html"></iframe>
+                    <h4 class="panel-heading">PO Status</h4>
+                    <canvas id="poChart" width="323" height="323" style="display: block; width: 323px; height: 323px;"></canvas>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-panel">
+                    <h4 class="panel-heading">Revenue</h4>
+                    <canvas id="revenueChart" width="323" height="323" style="display: block; width: 323px; height: 323px;"></canvas>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-lg-3 ds">
+              <!--COMPLETED ACTIONS DONUTS CHART-->
+              <h3>NOTIFICATIONS</h3>
+              <div style="max-height:750px;overflow:scroll;">
+                <br>
+                <p class="text-center">You don't have unread notifications.</p>
+              </div>
+              <hr>
+              <a class="btn btn-default btn-block" rel="nofollow" data-method="post" href="http://localhost:3000/notifications/mark_read">Mark all as read</a>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- --/wrapper ---->
+  </section>
+  <!-- /MAIN CONTENT -->
+  <!--main content end-->
+</section>

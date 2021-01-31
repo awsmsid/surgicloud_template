@@ -12,18 +12,21 @@ module SurgicloudLayout
 
       # Create an application layout file with partials for messages and navigation
       def generate_layout
-        file = "app/views/#{directory_name}/test.html.erb"
-        if File.exists?(file)
-          print("file: #{file} already exist. do you want to replace it? \n")
-          print("Press Y or N? ")
-          user_input = STDIN.gets.chomp
-          if user_input.downcase == 'y'
+        file_list = ["#{directory_name}/index.html.erb", "layouts/_header.html.erb", "layouts/_navigation_menu.html.erb"]
+        file_list.each do |file_to_create|
+          file = "app/views/#{file_to_create}"
+          if File.exists?(file)
+            print("file: #{file} already exist. do you want to replace it? \n")
+            print("Press Y or N? ")
+            user_input = STDIN.gets.chomp
+            if user_input.downcase == 'y'
+              Dir.mkdir(directory_name) unless File.directory?(directory_name)
+              copy_file file.split("/").last, file
+            end
+          else
             Dir.mkdir(directory_name) unless File.directory?(directory_name)
-            copy_file 'test.html.erb', file
+            copy_file file.split("/").last, file
           end
-        else
-          Dir.mkdir(directory_name) unless File.directory?(directory_name)
-          copy_file 'test.html.erb', file
         end
       end
     end
